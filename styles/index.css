@@ -1,39 +1,43 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #111; /* Dark background color */
-    color: #0a0a0a;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000; /* Dark background color */
+    color: #fff;
     height: 100vh;
-    overflow: hidden;
 }
 
 header {
-    position: absolute;
-    width: 1440px;
-    height: 810px;
-    left: 0px;
-    top: 0px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 100;
 }
 
-nav {
-
-position: absolute;
-width: 267px;
-height: 25px;
-left: 310px;
-top: 69px;
-
-
-}
 .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 100;
+    position: absolute;
+    left: 142px;
+    top: 62px;
+}
+
+.nav-menu {
+    position: absolute;
+    left: 310px;
+    top: 69px;
+    font-weight: 100;
 }
 
 nav ul {
     display: flex;
-    list-style-type: none;
+    justify-content: center;
 }
 
 nav ul li {
@@ -44,7 +48,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 100;
 }
 
 .hero {
@@ -57,17 +61,19 @@ nav ul li a {
 
 .hero-text {
     max-width: 45%;
+    width: 416px;
+    height: 44px;
 }
 
 .hero-text h1 {
-    font-size: 40rem;
+    font-size: 4rem;
     margin-bottom: 20px;
 }
 
 .hero-text p {
     font-size: 1.2rem;
     line-height: 1.5;
-    color: #ccc; /* Lighter color for paragraph */
+    color: #ccc;
 }
 
 .hero-image {
@@ -78,16 +84,14 @@ nav ul li a {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    filter: grayscale(100%); /* Black and white effect */
-    object-fit: cover; /* Ensures the image fills its container */
+    filter: grayscale(100%);
+    object-fit: cover;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
     }
 
@@ -110,7 +114,3 @@ nav ul li a {
         font-size: 1rem;
     }
 }
-
-
-
-
