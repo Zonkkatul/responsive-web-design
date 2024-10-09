@@ -9,137 +9,167 @@ body {
     background-color: #000000; 
     color: #fff;
     height: 100vh;
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 20px; 
 }
 
+
 header {
-    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    font-weight: 100;
-
-    .logo {
-        font-size: 1.5rem;
-        font-weight: 100;
-        position: absolute;
-        left: 142px;
-        top: 62px;
-    }
-
-    .nav-menu {
-        position: absolute;
-        left: 310px;
-        top: 69px;
-        font-weight: 100;
-
-        ul {
-            display: flex;
-            justify-content: center;
-
-            li {
-                margin-left: 20px;
-
-                a:hover {
-                    color: rgb(4, 13, 141);
-                    text-decoration: none;
-                    font-size: 16px;
-                    font-weight: 100;
-                }
-            }
-        }
-    }
+    padding: 20px; 
 }
 
+.logo {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-right: auto;
+}
+
+
+.nav-menu {
+    font-weight: 100;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu ul li {
+    margin-left: 20px; 
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+/* Hover effect */
+.nav-menu ul li a:hover {
+    color: rgb(4, 13, 141);
+    text-decoration: none;
+}
 
 
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: calc(100vh - 80px); 
-    padding: 0 50px;
-
-    .hero-text {
-        max-width: 45%;
-        width: 416px;
-        height: 44px;
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            color: #ccc;
-        }
-    }
-
-    .hero-image {
-        max-width: 45%;
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            filter: grayscale(100%);
-            object-fit: cover;
-        }
-    }
+    height: calc(100vh - 100px); 
+    padding: 0 50px; 
+    flex-direction: row; 
+    flex-wrap: wrap;
 }
 
-/* Responsive design part */
+.hero-text {
+    width: 45%;
+    text-align: left; 
+}
+
+.hero-text h1 {
+    font-size: 3.5rem; 
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.hero-image {
+    width: 45%; 
+}
+
+.hero-image img {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    object-fit: cover;
+}
+
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
-        text-align: center;
-
-        .hero-text {
-            max-width: 90%;
-            margin-bottom: 20px;
-        }
-
-        .hero-image {
-            max-width: 90%;
-        }
+        padding: 20px 10px;
+        text-align: center; 
     }
-}
 
-@media (max-width: 768px) {
     .hero-text {
-        h1 {
-            font-size: 2.5rem;
-        }
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
 
-        p {
-            font-size: 1rem;
-        }
+    .hero-image {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    header {
+        flex-direction: column; 
+        text-align: center;
     }
 }
 
-@media (max-width: 768px) {
-    header {
-        .nav-menu {
-            position: static;
-            width: 100%;
-            
-            ul {
-                flex-direction: column;
-                align-items: center;
-                display: none; 
-                background-color: #000;
-                padding: 10px;
-                width: 100%;
-                position: absolute;
-                top: 70px;
-                left: 0;
 
-                li {
-                    margin: 10px 0;
-                }
-            }
-        }
+
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .nav-menu ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .nav-menu ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 10px 0; 
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 1.2rem; 
+    }
+
+    .hero-image img {
+        border-radius: 5px; 
+        
     }
 }
