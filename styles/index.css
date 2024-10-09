@@ -50,7 +50,7 @@ header {
     font-weight: 100;
 }
 
-/* Hover effect */
+
 .nav-menu ul li a:hover {
     color: rgb(4, 13, 141);
     text-decoration: none;
@@ -85,6 +85,8 @@ header {
 
 .hero-image {
     width: 45%; 
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 .hero-image img {
@@ -125,7 +127,7 @@ header {
 
 @media (max-width: 768px) {
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero-text p {
@@ -144,6 +146,9 @@ header {
 
     .hero {
         padding: 10px 0; 
+    }
+    .hero-image img {
+        border-radius: 5px;
     }
 }
 
@@ -170,6 +175,6 @@ header {
 
     .hero-image img {
         border-radius: 5px; 
-        
+
     }
 }
